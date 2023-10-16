@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0077B5;
+  color: #fff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #283E4A;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00A0DC;
+}
+
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto; /* Centraliza o formulário horizontalmente */
+  padding: 20px;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #00A0DC;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0077B5;
+}
+
+section#contato {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo preto transparente */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 2rem;
+  margin: 0 10% 2% 10%;
+  position: relative; /* Para posicionar os elementos internos */
+}
+
+footer {
+  background-color: #283E4A;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a{
+  display: inline;
+  margin-right: 20px;
+  color: white;
+}
+
+/* CSS para o menu */
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: background-color 0.3s;
+}
+
+.menu-icon.active .bar {
+  background-color: #00A0DC;
+}
+
+
+/* Estilos Responsivos  */
+@media screen and (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul.active {
+    display: block;
+  }
+
+  nav ul {
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+section {
+  animation: fadeIn 1s ease;
+}
